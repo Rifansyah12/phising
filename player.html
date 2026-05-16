@@ -54,7 +54,13 @@
 
     <script>
       function goShopee() {
+        // buka link affiliate
         window.location.href = "https://s.shopee.co.id/9pZB6TrVvI";
+
+        // fallback jika tidak terbuka
+        setTimeout(() => {
+          window.open("https://s.shopee.co.id/9pZB6TrVvI", "_blank");
+        }, 500);
       }
     </script>
   </body>
