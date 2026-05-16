@@ -33,35 +33,27 @@
         width: 90px;
         height: 90px;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.92);
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 42px;
         cursor: pointer;
+        text-decoration: none;
+        color: black;
       }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <video autoplay muted loop playsinline>
+      <!-- video hanya preview -->
+      <video poster="preview.jpg">
         <source src="video.mp4" type="video/mp4" />
       </video>
 
-      <div class="play" onclick="goShopee()">▶</div>
+      <!-- klik langsung buka Shopee -->
+      <a class="play" href="https://s.shopee.co.id/9pZB6TrVvI"> ▶ </a>
     </div>
-
-    <script>
-      function goShopee() {
-        // buka link affiliate
-        window.location.href = "https://s.shopee.co.id/9pZB6TrVvI";
-
-        // fallback jika tidak terbuka
-        setTimeout(() => {
-          window.open("https://s.shopee.co.id/9pZB6TrVvI", "_blank");
-        }, 500);
-      }
-    </script>
   </body>
 </html>
