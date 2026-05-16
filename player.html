@@ -1,9 +1,10 @@
 <!doctype html>
-<html>
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Video Player</title>
+
+    <title>Player</title>
 
     <style>
       body {
@@ -12,16 +13,49 @@
         overflow: hidden;
       }
 
-      video {
+      .container {
+        position: relative;
         width: 100vw;
         height: 100vh;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
+      }
+
+      .play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 42px;
+        cursor: pointer;
       }
     </style>
   </head>
+
   <body>
-    <video autoplay muted loop playsinline controls>
-      <source src="vidio.mp4" type="vidio/mp4" />
-    </video>
+    <div class="container">
+      <video autoplay muted loop playsinline>
+        <source src="video.mp4" type="video/mp4" />
+      </video>
+
+      <div class="play" onclick="goShopee()">▶</div>
+    </div>
+
+    <script>
+      function goShopee() {
+        window.location.href = "https://s.shopee.co.id/9pZB6TrVvI";
+      }
+    </script>
   </body>
 </html>
